@@ -662,6 +662,11 @@ impl Encoder for ImageRenderingWrapper {
         let atom_str = match self.value {
             ImageRendering::OptimizeQuality => "optimize_quality",
             ImageRendering::OptimizeSpeed => "optimize_speed",
+            // usvg 0.47 added these image-rendering modes.
+            ImageRendering::Smooth => "smooth",
+            ImageRendering::HighQuality => "high_quality",
+            ImageRendering::CrispEdges => "crisp_edges",
+            ImageRendering::Pixelated => "pixelated",
         };
         atom_str.encode(env)
     }
