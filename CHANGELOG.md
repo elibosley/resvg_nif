@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ---
 
+## [0.6.0] – 2026-07-14
+- Add reusable/warm font database support via the `:fontdb` option, so the fontdb::Database can be built once and reused across renders instead of being rebuilt every call.
+- Add `svg_string_to_png_binary/2`, returning the PNG as an Elixir binary instead of a byte list.
+- Upgrade to Resvg/usvg 0.47.
+- Optimize the release profile of the native crate (lto, codegen-units, opt-level) for render-heavy workloads.
+
 ## [0.5.0] – 2024-13-10
 - Update dependencies.
 - Fix typespecs.
